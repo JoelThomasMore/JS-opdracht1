@@ -1,0 +1,14 @@
+body{
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* laat input pijlen altijd zien op nummerveld postcode */
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* https://stackoverflow.com/questions/25194631/is-it-possible-to-always-show-up-down-arrows-for-input-number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    opacity: 1;
+}

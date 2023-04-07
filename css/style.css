@@ -5,6 +5,20 @@ body{
     padding-bottom: 5%;
 }
 
+label{
+    padding-top: 10px;
+   font-weight: 500;
+}
+
+label.form-check-label{
+    padding-top: 0px;
+}
+
+.boodsectie{
+    padding-top: 20px;
+}
+
+
 /* laat input pijlen altijd zien op nummerveld postcode */
 /* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
 /* https://stackoverflow.com/questions/25194631/is-it-possible-to-always-show-up-down-arrows-for-input-number */
@@ -12,3 +26,4 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     opacity: 1;
 }
+

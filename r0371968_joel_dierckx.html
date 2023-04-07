@@ -13,177 +13,192 @@
     <title>formulier</title>
 </head>
 
-<body>
+<body onload="start()">
+    <!-- header -->
     <div class="row">
-        <!-- form sectie -->
+
+        <h1>Registreer</h1>
+        <p>Meld je aan bij Anoroc Services, wij beschermen jou software tegen malware!</p>
+    </div>
+    <!-- form sectie -->
+    <div class="row">
         <div class="col-md-8 formsectie">
-            <form action="" method="post" target="_blank">
-                <!-- https://tm-statweb.be/forms.php -->
-                <!-- header -->
-                <h1>Registreer</h1>
-                <p>Meld je aan bij Anoroc Services, wij beschermen jou software tegen malware!</p>
-                <!-- naam -->
-                <!-- r1 -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="Voornaam" class="form-label">Voornaam</label>
-                        <input type="text" class="form-control" id="Voornaam" name="Voornaam" placeholder="Uw voornaam"
-                            required>
-                        <div class="valid-feedback">
-                            Geef je voornaam in
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="naam" class="form-label">Naam</label>
-                        <input type="text" class="form-control" id="naam" name="naam" placeholder="Uw naam" required>
-                        <div class="valid-feedback">
-                            Geef je naam in
-                        </div>
+            <!-- <form> -->
+            <!-- action="https://tm-statweb.be/forms.php" method="post" target="_blank" -->
+            <!-- naam -->
+            <!-- r1 -->
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="Voornaam" class="form-label">Voornaam</label>
+                    <input type="text" class="form-control" id="Voornaam" name="Voornaam" placeholder="Uw voornaam">
+                    <!-- required -->
+                    <div class="valid-feedback">
+                        Geef je voornaam in
                     </div>
                 </div>
-                <!-- r2 -->
-                <div class="row">
-                    <!-- gebruikersnaam -->
+                <div class="col-md-6">
+                    <label for="naam" class="form-label">Naam</label>
+                    <input type="text" class="form-control" id="naam" name="naam" placeholder="Uw naam">
+                    <div class="valid-feedback">
+                        Geef je naam in
+                    </div>
+                </div>
+            </div>
+            <!-- r2 -->
+            <div class="row">
+                <!-- gebruikersnaam -->
 
-                    <div class="col-md-6">
-                        <label for="gebruikersnaam" class="form-label">Gebruikersnaam</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="u911236" id="gebruikersnaam"
-                                name="gebruikersnaam">
-                        </div>
-                    </div>
-                    <!-- email -->
-                    <div class="col-md-6">
-                        <label for="email" class="form-label">E-mailadres</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="mail@example.be">
+                <div class="col-md-6">
+                    <label for="gebruikersnaam" class="form-label">Gebruikersnaam</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="u911236" id="gebruikersnaam"
+                            name="gebruikersnaam">
                     </div>
                 </div>
-                <!-- passwoord -->
-                <!-- r3 -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="pass1" class="form-label">Wachtwoord</label>
-                        <input type="password" class="form-control" id="pass1" name="pass1" required>
-                        <div id="passhelp" class="form-text">Je wachtwoord moet minstens 8 tekens lang zijn</div>
+                <!-- email -->
+                <div class="col-md-6">
+                    <label for="email" class="form-label">E-mailadres</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="mail@example.be">
+                </div>
+            </div>
+            <!-- passwoord -->
+            <!-- r3 -->
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="pass1" class="form-label">Wachtwoord</label>
+                    <input type="password" class="form-control" id="pass1" name="pass1">
+                    <div id="passhelp" class="form-text">Je wachtwoord moet minstens 8 tekens lang zijn</div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="pass2" class="form-label">Herhaal wachtwoord</label>
+                    <input type="password" class="form-control" id="pass2" name="pass2">
+                </div>
+            </div>
+            <!-- adres: adres en huisnummer -->
+            <!-- r4 -->
+            <div class="col-md-12">
+                <label for="Adres" class="form-label">Adres</label>
+                <input type="text" class="form-control" id="Adres" name="Adres" placeholder="Uw adres en huisnummer">
+            </div>
+            <!-- select -->
+            <!-- r5 -->
+            <!-- land -->
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="land" class="form-label">Land</label>
+                    <select class="form-select" id="land" name="land">
+                        <option selected value="">Kies een land</option>
+                        <option value="België">België</option>
+                        <option value="France">France</option>
+                        <option value="Nederland">Nederland</option>
+                        <option value="Deutschland">Deutschland</option>
+                    </select>
+                </div>
+                <!-- Provincie -->
+                <div class="col-md-4">
+                    <label for="provincie" class="form-label">Provincie</label>
+                    <select class="form-select" id="provincie" name="provincie">
+                        <option selected value="">Kies een provincie</option>
+                        <option value="Antwerpen">Antwerpen</option>
+                        <option value="Limburg">Limburg</option>
+                        <option value="Oost-Vlaanderen">Oost-Vlaanderen</option>
+                        <option value="Vlaams-Brabant">Vlaams-Brabant</option>
+                        <option value="West-Vlaanderen">West-Vlaanderen</option>
+                        <option value="Waals-Brabant">Waals-Brabant</option>
+                        <option value="Henegouwen">Henegouwen</option>
+                        <option value="Luik">Luik</option>
+                        <option value="Luxemburg">Luxemburg</option>
+                        <option value="Namen">Namen</option>
+                        <option value="Brussels Hoofdstedelijk Gewest">Brussels Hoofdstedelijk Gewest</option>
+                    </select>
+                </div>
+                <!-- Postcode -->
+                <!-- min en max -->
+                <!-- https://www.w3schools.com/tags/att_input_type_number.asp-->
+                <div class="col-md-3">
+                    <label for="postcode" class="form-label">Postcode</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="postcode" name="postcode" min="1000" max="9999">
+                    </div>
+                </div>
+            </div>
+            <!-- lijn -->
+            <hr>
+            <!-- r6 -->
+            <div class="row">
+                <!-- checkbox -->
+                <div class="col-md-6">
+                    <h5>Hou me op de hoogte</h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="nieuwsbrief" name="nieuwsbrief">
+                        <label class="form-check-label" for="nieuwsbrief">Inschrijven voor onze nieuwsbrief</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="voorwaarden" name="voorwaarden">
+                        <label class="form-check-label" for="voorwaarden">Ik ga akkoord met de algemene
+                            voorwaarden.</label>
+                    </div>
+                </div>
+                <!-- radio-->
+                <!-- betaling -->
+                <div class="col-md-6">
+                    <h5>Betaling</h5>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="betaling" id="bankingapp" value="bankingapp"
+                            checked>
+                        <label class="form-check-label" for="bankingapp">
+                            Banking app
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="betaling" id="overschrijving"
+                            value="overschrijving">
+                        <label class="form-check-label" for="overschrijving">
+                            Overschrijving
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="betaling" id="visa" value="visa">
+                        <label class="form-check-label" for="visa">
+                            Visa card
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="betaling" id="paypal" value="paypal">
+                        <label class="form-check-label" for="paypal">
+                            PayPal
+                        </label>
                     </div>
 
-                    <div class="col-md-6">
-                        <label for="pass2" class="form-label">Herhaal wachtwoord</label>
-                        <input type="password" class="form-control" id="pass2" name="pass2" required>
-                    </div>
                 </div>
-                <!-- adres: adres en huisnummer -->
-                <!-- r4 -->
-                <div class="col-md-12">
-                    <label for="Adres" class="form-label">Adres</label>
-                    <input type="text" class="form-control" id="Adres" name="Adres" placeholder="Uw adres en huisnummer"
-                        required>
-                </div>
-                <!-- select -->
-                <!-- r5 -->
-                <!-- land -->
-                <div class="row">
-                    <div class="col-md-5">
-                        <label for="land" class="form-label">Land</label>
-                        <select class="form-select" id="land" name="land">
-                            <option selected value="leeg">Kies een land</option>
-                            <option value="België">België</option>
-                            <option value="France">France</option>
-                            <option value="Nederland">Nederland</option>
-                            <option value="Deutschland">Deutschland</option>
-                        </select>
-                    </div>
-                    <!-- Provincie -->
-                    <div class="col-md-4">
-                        <label for="provincie" class="form-label">Provincie</label>
-                        <select class="form-select" id="provincie" name="provincie">
-                            <option selected value="leeg">Kies een provincie</option>
-                        </select>
-                    </div>
-                    <!-- Postcode -->
-                    <!-- min en max -->
-                    <!-- https://www.w3schools.com/tags/att_input_type_number.asp-->
-                    <div class="col-md-3">
-                        <label for="postcode" class="form-label">Postcode</label>
-                        <div class="input-group">
-                            <input type="number" class="form-control" id="postcode" name="postcode" min="1000"
-                                max="9999">
-                        </div>
-                    </div>
-                </div>
-                <!-- lijn -->
-                <hr>
-                <!-- r6 -->
-                <div class="row">
-                    <!-- checkbox -->
-                    <div class="col-md-6">
-                        <h5>Hou me op de hoogte</h5>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="nieuwsbrief" name="nieuwsbrief">
-                            <label class="form-check-label" for="nieuwsbrief">Inschrijven voor onze nieuwsbrief</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="voorwaarden" name="voorwaarden">
-                            <label class="form-check-label" for="voorwaarden">Ik ga akkoord met de algemene
-                                voorwaarden.</label>
-                        </div>
-                    </div>
-                    <!-- radio-->
-                    <!-- betaling -->
-                    <div class="col-md-6">
-                        <h5>Betaling</h5>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="betaling" id="bankingapp"
-                                value="bankingapp" checked>
-                            <label class="form-check-label" for="bankingapp">
-                                Banking app
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="betaling" id="overschrijving"
-                                value="overschrijving">
-                            <label class="form-check-label" for="overschrijving">
-                                Overschrijving
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="betaling" id="visa" value="visa">
-                            <label class="form-check-label" for="visa">
-                                Visa card
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="betaling" id="paypal" value="paypal">
-                            <label class="form-check-label" for="paypal">
-                                PayPal
-                            </label>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- lijn2 -->
-                <hr>
-                <!-- button -->
-                <div class="d-grid gap-2 col-8 mx-auto">
-                    <button type="submit" class="btn btn-primary">Wave your magic wand</button>
-                </div>
-            </form>
+            </div>
+            <!-- lijn2 -->
+            <hr>
+            <!-- button -->
+            <div class="d-grid gap-2 col-8 mx-auto">
+                <button id="submit" class="btn btn-primary">Wave your magic wand</button>
+            </div>
+            <!-- </form> -->
 
         </div>
         <!-- boodschappen sectie -->
         <div class="col-md-4 boodsectie">
             <!-- errors -->
-            <div class="alert alert-danger" role="alert">
-                A simple danger alert—check it out!
+            <div id="errors" class="alert alert-danger" role="alert">
+                <h4>Yikes, errors</h4>
+                <p id="errorlist">hier komen errors</p>
             </div>
             <!-- succes -->
-            <div class="alert alert-success" role="alert">
-                A simple success alert—check it out!
+            <div id="succes" class="alert alert-success" role="alert">
+                <h4>Goed gedaan!</h4>
+                <p>Aww yeah, je werd geregistreerd.</p>
             </div>
             <!-- betaling -->
-            <div class="alert alert-info" role="alert">
-                A simple info alert—check it out!
+            <div id="betaling" class="alert alert-info" role="alert">
+                <h4>Betalingswijze</h4>
+                <p id="betalingswijze">Je betalingswijze is ...</p>
             </div>
 
         </div>

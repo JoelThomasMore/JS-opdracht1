@@ -22,8 +22,8 @@ const veldOverschrijving = document.getElementById("overschrijving");
 const veldVisa = document.getElementById("visa");
 const veldPaypal = document.getElementById("paypal");
 //tekstvakken
-const texterrors = document.getElementById("errorlist")
-const textbetaling = document.getElementById("betalingswijze")
+const texterrors = document.getElementById("errorlist");
+const textbetaling = document.getElementById("betalingswijze");
 //---------
 
 //code start als pagina geladen is (body)
@@ -117,7 +117,7 @@ if(postcodeWaarde != "")
 //algemene voorwaarden
 let algemenevoorwaarden = validateVoorwaarden(veldVoorwaarden);
 if(algemenevoorwaarden != ""){
-    errors.push(algemenevoorwaarden)
+    errors.push(algemenevoorwaarden);
 }
 
 //einde validatie, if errors => display, else display rest
@@ -174,7 +174,7 @@ function validateEmail(emailadres){
     //https://stackoverflow.com/questions/9238640/how-long-can-a-tld-possibly-be#:~:text=Longest%20TLD%20up%20to%20date,northwesternmutual%20or%20.
     //https://regexr.com/
     
-    //probleem; sectie tussen @ en .(com) zou punten(.) mogen bevatten, oplossing: afsplitsen .com met string methode
+    //probleem; sectie tussen @ en .(com) zou punten(.) mogen bevatten, oplossing: afsplitsen .(com) met string methode
     //test eerste deel is dan /(^[A-Za-z0-9])([-A-Za-z0-9.]*)@([-A-Za-z0-9.]{2,})/g
     //test tweede deel is dan /([-A-Za-z0-9]{2,24})/g
     let regex1 = /(^[A-Za-z0-9])([-A-Za-z0-9.]*)@([-A-Za-z0-9.]{2,})/g;
@@ -216,7 +216,7 @@ if(passwoord1 !== passwoord2){
 }
 //test of wachtwoord minder dan 8 karakters heeft
 if(( passwoord1.length >= 1 && passwoord1.length < 8)||(passwoord2.length >= 1 && passwoord2.length < 8)){
-    output.push(fouten[1])
+    output.push(fouten[1]);
 }
 //geef fouten terug
 return output;
@@ -261,7 +261,7 @@ if(check2 != null){
 }
 //test heeft returnwaarde?
 if(check != null){
-    //test komt overeen met input? nee == fout
+    //test komt overeen met input? ja == true
     if(Username == check[0]){
         test = true;
         //console.log(check[0])
@@ -306,7 +306,7 @@ if(String(parseInt(veld.value)) == veld.value){
         return "";
     }
     else{
-        return "De waarde van postcode moet tussen 1000 en 9999 liggen."
+        return "De waarde van postcode moet tussen 1000 en 9999 liggen.";
     }
 
    
